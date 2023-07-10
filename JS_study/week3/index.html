@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js 스터디 3주차</title>
+</head>
+
+<body>
+    <script>
+        // 생성자 함수를 정의, 템플릿 역할
+        function person(name, age, department) {
+            this.name = name
+            this.age = age
+            this.department = department;
+        }
+
+        person.prototype.univ = 'sungkyul';
+
+        // 생성자 함수를 사용하여 객체를 생성
+        var person1 = new person('ym', 26, '미소');
+        var person2 = new person('hj', 26, '산경');
+
+        function main() {
+            console.log(this);
+        }
+
+        const object = {
+            name: '노승희1',
+            main: function() {
+                console.log(this);
+            },
+            mainArrow: () => {
+                console.log(this);
+            }
+        }
+
+        object.main();
+        object.mainArrow();
+    </script>
+</body>
+
+</html>
