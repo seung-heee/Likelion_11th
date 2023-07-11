@@ -98,3 +98,80 @@ body {
 .sub-title {
     text-shadow: 3px 3px 3px black;
 }
+
+.btn-main {
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0px 0px 8px #fff);
+}
+
+
+/* default btn */
+
+.island_btn {
+    background-color: black;
+    clip-path: polygon(100.3% 0%, 99.7% 70%, 89.4% 101%, 0% 101%, 0% 33%, 12.9% 0%);
+    width: 98%;
+    height: 100%;
+}
+
+.island_btn_out {
+    clip-path: polygon(100.3% 0%, 99.7% 70%, 89.4% 101%, 0% 101%, 0% 33%, 12.9% 0%);
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    z-index: -1;
+}
+
+.island_btn:hover {
+    color: #fff;
+    transition: 0.3s;
+}
+
+
+/* waterIsland_btn */
+
+.water {
+    color: #6bc6dd;
+}
+
+.water_out {
+    background-color: #6bc6dd;
+}
+
+.water:hover {
+    color: #fff;
+    background-color: #55d6f6;
+}
+
+
+/* Romantic Island btn */
+
+.romantic {
+    color: #c62b6b;
+}
+
+.romantic_out {
+    background-color: #c62b6b;
+}
+
+.romantic:hover {
+    color: #fff;
+    background-color: #e43a81;
+}
+
+
+/* garden Island */
+
+.garden {
+    color: #287e3a;
+}
+
+.garden_out {
+    background-color: #287e3a;
+}
+
+.garden:hover {
+    color: #fff;
+    background-color: #29a844;
+}
