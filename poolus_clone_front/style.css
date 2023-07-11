@@ -175,3 +175,26 @@ body {
     color: #fff;
     background-color: #29a844;
 }
+
+.footer_arrow {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 35px;
+}
+
+.footer_arrow p {
+    font-size: 12px;
+    color: #fff;
+    text-shadow: 2px 2px 5px black;
+    margin-bottom: 5px;
+}
+
+.footer_arrow img {
+    width: auto;
+    height: 40px;
+    filter: drop-shadow(2px 2px 5px #000000);
+}
+
+.allbtn {
+    margin-top: 40px;
+}
