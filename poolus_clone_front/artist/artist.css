@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'LOTTERIADDAG';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIADDAG.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.ddag_font {
+    font-family: 'LOTTERIADDAG';
+}
+
+body {
+    background-color: #0f0f0f;
+}
+
+.display-container {
+    max-width: 415px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
+    background-image: url('./artist_img/waterback.png');
+    background-size: cover;
+}
