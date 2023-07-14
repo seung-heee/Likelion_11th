@@ -23,6 +23,16 @@ body {
 }
 
 
+/* nav */
+
+nav {
+    width: 415px;
+    margin: 0 auto;
+    background-image: url('./artist_img/waterback.png');
+    background-size: cover;
+}
+
+
 /* 버튼 */
 
 .day {
@@ -39,4 +49,60 @@ body {
 .day a {
     text-decoration: none;
     color: inherit
+}
+
+
+/* 아티스트 이미지 */
+
+.artist_section {
+    padding-top: 85px;
+}
+
+.artist {
+    position: relative;
+}
+
+.artist_img img {
+    width: 280px;
+    margin-right: 50px;
+}
+
+.artist_name {
+    font-size: 60px;
+    position: absolute;
+    right: 38px;
+    bottom: 63px;
+    text-shadow: 2px 2px #6BC6DD;
+}
+
+.artist_time {
+    font-size: 30px;
+    position: absolute;
+    right: 40px;
+    bottom: 37px;
+    text-shadow: 2px 2px #6BC6DD;
+}
+
+
+/*artist_right*/
+
+.artist_img_r img {
+    width: 280px;
+    margin-left: 50px;
+}
+
+.artist_name_r {
+    font-size: 60px;
+    position: absolute;
+    left: 38px;
+    bottom: 63px;
+    text-shadow: 2px 2px #6BC6DD;
+}
+
+.artist_time_r {
+    font-size: 30px;
+    position: absolute;
+    left: 40px;
+    bottom: 37px;
+    text-shadow: 2px 2px #6BC6DD;
 }
