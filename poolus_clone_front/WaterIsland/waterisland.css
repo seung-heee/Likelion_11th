@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sbAggro_font {
+    font-family: 'SBAggroB';
+}
+
+body {
+    background-color: #0f0f0f;
+}
+
+.display-container {
+    box-shadow: 0 0 15px 0 hsla(0, 0%, 100%, .75);
+    max-width: 415px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
+    background-color: #000;
+}
+
+nav {
+    width: 415px;
+    margin: 0 auto;
+    background-image: url('./artist_img/waterback.png');
+    background-size: cover;
+}
+
+
+/* 버튼 */
+
+.water {
+    border-bottom: 5px solid #6BC6DD;
+    font-size: 20px;
+    color: white;
+}
+
+.waterUnAct {
+    border-bottom: 5px solid rgb(107, 198, 221, 0.5);
+    color: rgb(255, 255, 255, 0.5);
+}
+
+.water a {
+    text-decoration: none;
+    color: inherit
+}
