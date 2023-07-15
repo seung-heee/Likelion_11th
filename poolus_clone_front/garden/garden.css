@@ -101,6 +101,7 @@ form p input {
 button {
     background-color: transparent;
     border: none;
+    width: 300px;
 }
 
 .booth {
