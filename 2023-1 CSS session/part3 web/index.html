@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>likelion</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header>
+        <h1 id="top">HTML 연습</h1>
+        <p>멋쟁이 사자처럼과 함께 HTML을 배워보자</p>
+    </header>
+    <nav>
+        <hr>
+        <a href="#top">시작</a>
+        <a href="#middle">중간</a>
+        <a href="#bottom">끝</a>
+        <hr>
+    </nav>
+    <main>
+        <section id="middle">
+            <form>
+                <fieldset>
+                    <legend>정보입력</legend>
+                    <table>
+                        <tr>
+                            <th><label for="id">ID</label></th>
+                            <td colspan="2"><input type="text" id="id"></td>
+                        </tr>
+                        <tr>
+                            <th><label for="passwd">Password</label></th>
+                            <td colspan="2"><input type="password" id="passwd"></td>
+                        </tr>
+                        <tr>
+                            <th>성별</th>
+                            <td><label for="woman">여자</label><input type="radio" id="woman" name="gender"></td>
+                            <td><label for="man">남자</label><input type="radio" id="man" name="gender"></td>
+                        </tr>
+                        <tr>
+                            <th>단과대</th>
+                            <td colspan="2">
+                                <select>
+                                    <option>신학대학</option>
+                                    <option>인문대학</option>
+                                    <option>사회과학대학</option>
+                                    <option>글로벌경영기술대학</option>
+                                    <option>사범대학</option>
+                                    <option>IT공과대학</option>
+                                    <option>예술대학</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">자신있는 과목</th>
+                            <td><input type="checkbox" name="Korean" id="Korean"><label for="Korean">국어</label></td>
+                            <td><input type="checkbox" name="math" id="math"><label for="math">수학</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="english" id="english"><label for="english">영어</label></td>
+                            <td><input type="checkbox" name="Science" id="Science"><label for="Science">과학</label></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="reset" value="초기화"></td>
+                            <td><input type="submit" value="제출"></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </section>
+        <section>
+            <h3>사진구경</h3>
+            <article>
+                <img src="https://placeimg.com/500/300/animals" alt="동물">
+                <p>귀여운 동물사진</p>
+            </article>
+            <article>
+                <img src="https://placeimg.com/500/300/nature" alt="풍경">
+                <p>멋진 풍경사진</p>
+            </article>
+        </section>
+    </main>
+    <aside>
+        <ol>
+            <li>
+                <h3>학교</h3>
+                <ul>
+                    <li><a href="https://www.sungkyul.ac.kr/index_intro_work.html">홈페이지</a></li>
+                    <li><a href="https://cc.sungkyul.ac.kr/">사이버캠퍼스</a></li>
+                    <li><a href="https://www.sungkyul.ac.kr/skukr/261/subview.do#none">학교지도</a></li>
+                    <li><a href="https://www.sungkyul.ac.kr/skukr/313/subview.do">학사일정</a></li>
+                </ul>
+            </li>
+            <li>
+                <h3>멋사</h3>
+                <ul>
+                    <li><a href="https://techit.education/">techit</a></li>
+                    <li><a href="https://likelion.notion.site/4d87d42af25e461e8b24095d61c424f9">지역그룹</a></li>
+                    <li><a href="https://www.likelion.net/">공식사이트</a></li>
+                    <li><a href="https://www.instagram.com/likelion_sku/">성결대 멋사 인스타</a></li>
+
+                </ul>
+            </li>
+        </ol>
+    </aside>
+    <footer>
+        <p id="bottom">Copyright ©NamMJ. All rights reserved.
+            <br>LIKELION at SKU
+        </p>
+        <div class="icons">
+            <a href="mailto:nam0221@likelion.org"><i class="far fa-envelope"></i></a>
+            <a href="https://github.com/un-known0/LikeLion"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
