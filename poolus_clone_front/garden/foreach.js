@@ -16,3 +16,17 @@ students.forEach(
     }
 
 );
+
+
+const template = `
+    <button>
+        <div class="booth d-flex">
+            <div class="boothimg"><img src="./gardenImg/booth.png" alt="부스이미지"></div>
+            <div class="boothinfo d-flex flex-column justify-content-center text-start">
+                <p class="boothtitle mb-1">${item.department}</p>
+                <p class="boothsub mb-0">${menusToShow.map(menu => `<span>${menu.name}</span><br/>`).join('')}</p>
+            </div>
+        </div>
+    </button>
+    `;
+    $(".boothSection").append(template);
