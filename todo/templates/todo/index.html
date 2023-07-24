@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+
+<body>
+    <h1>할 일이 산더미이다.</h1>
+    {% for todo in todolist %}
+    <h3>{{ todo.todo }}</h3>
+    <p>{{ todo.description }}</p>
+    <p>중요한가 ? {{ todo.important }}</p>
+    <p>완료했는가 ? {{ todo.complete }}</p>
+
+    <hr/> {% endfor %}
+</body>
+
+</html>
