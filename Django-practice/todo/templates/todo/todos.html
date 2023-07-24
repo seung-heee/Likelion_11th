@@ -1,0 +1,76 @@
+<!DOCTYPE html> {% load static %}
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo List Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'todo/bootstrap/bootstrap.min.css' %}">
+</head>
+
+<body>
+    <!-- 유저가 검증이 되었나? -->
+    {% if user.is_authenticated %}
+    <a href="/accounts/signout" class="btn btn-primary">Logout</a> {% else %}
+    <a href="/accounts/signup" class="btn btn-primary">회원가입</a>
+    <a href="/accounts/signin" class="btn btn-primary">Login</a> {% endif %}
+    <section class="vh-100" style="background-color: #eee;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-12 col-xl-10">
+                    <div class="card">
+                        <div class="card-header p-3">
+                            <h5 class="mb-0"><i class="fa-solid fa-list-check"></i>&nbsp;ToDo List</h5>
+                        </div>
+                        <div class="card-body overflow-auto" style="position: relative; height: 400px">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>ToDo</th>
+                                        <th>Description</th>
+                                        <th>Update</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for todo in todolist %} {% if todo.complete %} {% else %}
+                                    <tr class="fw-normal">
+                                        <th>
+                                            {% if todo.important %}
+                                            <i class="fa-solid fa-star text-warning"></i> {% else %}
+                                            <i class="fa-solid fa-star"></i>{% endif %}
+
+                                            <span class="ms-2">{{ todo.todo }}</span>
+                                        </th>
+                                        <td class="align-middle">
+                                            <span>{{ todo.description }}</span>
+                                        </td>
+                                        <td class="align-middle">
+                                            <h5 class="mb-0"><a href="{% url 'update' todo.pk %}" role="button" class="badge bg-secondary" style="text-decoration-line: none;">수정하기</a></h5>
+                                        </td>
+                                        <td class="align-middle">
+                                            <a href="{% url 'success' todo.pk %}" data-bs-toggle="tooltip" data-bs-title="Done"><i class="fa-solid fa-check text-success me-3"></i></a>
+                                            <a href="{% url 'delete' todo.pk %}" data-bs-toggle="tooltip" data-bs-title="Remove"><i class="fa-solid fa-trash-can text-danger"></i></a>
+                                        </td>
+                                    </tr>
+                                    {% endif %} {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card-footer text-end p-3">
+                            <a href="{% url 'todo_list' %}" class="btn btn-primary">Add Task</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/6347866849.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+</body>
+
+</html>
