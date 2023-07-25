@@ -370,3 +370,48 @@ body {
 .hamburger {
     margin-left: 125px;
 }
+
+.lotti lottie-player {
+    margin: 0 auto;
+}
+
+.a,
+.aa,
+.aaa,
+.aaaa {
+    position: fixed;
+}
+
+.a {
+    bottom: 0;
+    left: 0;
+}
+
+.aa {
+    right: 0;
+    bottom: 0;
+}
+
+.aaa {
+    bottom: 0;
+    right: 50%;
+}
+
+.aaaa {
+    bottom: 0;
+    left: 50%;
+}
+
+.lion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.lion p {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
